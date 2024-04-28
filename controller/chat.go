@@ -446,7 +446,7 @@ func ImagesForOpenAI(c *gin.Context) {
 	}
 
 	request.Prompt = discord.UpdatePrompt(request.Prompt)
-	common.LogError(c.Request.Context(), "Updated request.Prompt: ", request.Prompt)
+	common.LogError(c.Request.Context(), request.Prompt)
 
 	if runeCount := len([]rune(request.Prompt)); runeCount > 2000 {
 		c.JSON(http.StatusOK, gin.H{
