@@ -445,7 +445,7 @@ func ImagesForOpenAI(c *gin.Context) {
 		return
 	}
 
-	discord.UpdatePrompt(&request, request.Prompt)
+	request.Prompt = discord.UpdatePrompt(request.Prompt)
 	fmt.Println("New Prompt: ", request.Prompt)
 
 	if runeCount := len([]rune(request.Prompt)); runeCount > 2000 {

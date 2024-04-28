@@ -643,6 +643,7 @@ func FilterConfigs(configs []model.BotConfig, secret, gptModel string, channelId
 }
 
 // UpdatePrompt 用于添加自定义的绘画提示词，减少/v1/images/generations出图失败
-func UpdatePrompt(req *OpenAIImagesGenerationRequest, newPrompt string) {
-	req.Prompt = ImagePromptWord + newPrompt
+func UpdatePrompt(newPrompt string) string {
+	newPrompt = ImagePromptWord + newPrompt
+	return newPrompt
 }
