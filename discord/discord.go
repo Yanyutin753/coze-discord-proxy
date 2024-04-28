@@ -39,7 +39,7 @@ var ChannelAutoDelTime = os.Getenv("CHANNEL_AUTO_DEL_TIME")
 var CozeBotStayActiveEnable = os.Getenv("COZE_BOT_STAY_ACTIVE_ENABLE")
 var UserAgent = os.Getenv("USER_AGENT")
 var UserAuthorization = os.Getenv("USER_AUTHORIZATION")
-ImagePromptWord = os.Getenv("IMAGE_PROMPT_WORD")
+var ImagePromptWord = os.Getenv("IMAGE_PROMPT_WORD")
 
 var UserAuthorizations = strings.Split(UserAuthorization, ",")
 var NoAvailableUserAuthChan = make(chan string)
